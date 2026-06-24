@@ -22,7 +22,14 @@
   body{background:var(--farbe-hintergrund);color:var(--farbe-text);font-family:var(--schrift-sans);line-height:1.65;-webkit-font-smoothing:antialiased;}
   .seite{max-width:1080px;margin:0 auto;padding:0 28px;}
 
-  .hero{background:var(--farbe-dunkel);color:#F2ECE4;padding:84px 0 72px;}
+  .hero{
+    background-color:var(--farbe-dunkel);
+    background-image:linear-gradient(90deg, rgba(38,32,27,.97) 0%, rgba(38,32,27,.90) 42%, rgba(38,32,27,.45) 100%), url('bilder/hero.png');
+    background-position:center, center right;
+    background-size:cover, cover;
+    background-repeat:no-repeat, no-repeat;
+    color:#F2ECE4;padding:84px 0 72px;
+  }
   .hero .balken{width:70px;height:6px;background:var(--farbe-akzent);border-radius:3px;margin-bottom:30px;}
   .hero .label{font-weight:700;font-size:13px;letter-spacing:3px;text-transform:uppercase;color:var(--farbe-akzent-hell);margin-bottom:22px;}
   .hero h1{font-family:var(--schrift-serif);font-weight:800;font-size:50px;line-height:1.08;color:#fff;max-width:18ch;}
