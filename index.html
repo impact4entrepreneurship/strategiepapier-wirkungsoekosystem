@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Strategiepapier – Das Wirkungs-Ökosystem | Impact4Entrepreneurship</title>
+<meta name="description" content="Strategiepapier für die Geschäftsführung der Impact4Entrepreneurship gGmbH: das innovative Geschäftskonzept eines Berufungs-Inkubators und Wirkungs-Ökosystems.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --farbe-hintergrund:#F2ECE4; --farbe-hintergrund-2:#EFE7DC; --farbe-karte:#FFFFFF;
+    --farbe-dunkel:#26201B; --farbe-akzent:#A07D52; --farbe-akzent-hell:#C9A877;
+    --farbe-text:#26201B; --farbe-text-grau:#6B6259; --farbe-linie:#E3D9CC;
+    --schrift-serif:'Playfair Display',Georgia,'Times New Roman',serif;
+    --schrift-sans:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+    --radius:18px; --schatten:0 10px 30px rgba(38,32,27,.08);
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{background:var(--farbe-hintergrund);color:var(--farbe-text);font-family:var(--schrift-sans);line-height:1.65;-webkit-font-smoothing:antialiased;}
+  .seite{max-width:1080px;margin:0 auto;padding:0 28px;}
+
+  .hero{background:var(--farbe-dunkel);color:#F2ECE4;padding:84px 0 72px;}
+  .hero .balken{width:70px;height:6px;background:var(--farbe-akzent);border-radius:3px;margin-bottom:30px;}
+  .hero .label{font-weight:700;font-size:13px;letter-spacing:3px;text-transform:uppercase;color:var(--farbe-akzent-hell);margin-bottom:22px;}
+  .hero h1{font-family:var(--schrift-serif);font-weight:800;font-size:50px;line-height:1.08;color:#fff;max-width:18ch;}
+  .hero h1 span{color:var(--farbe-akzent-hell);}
+  .hero .unter{font-size:18px;color:#C9C0B5;margin-top:24px;max-width:64ch;}
+  .meta{display:flex;flex-wrap:wrap;gap:14px;margin-top:38px;}
+  .meta .chip{background:rgba(255,255,255,.06);border:1px solid #43392F;border-radius:12px;padding:12px 18px;font-size:13px;color:#C9C0B5;}
+  .meta .chip strong{display:block;color:#fff;font-size:14px;margin-bottom:2px;}
+
+  section.block{padding:60px 0;}
+  section.block:nth-child(even){background:var(--farbe-hintergrund-2);}
+  .label-akz{font-weight:700;font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--farbe-akzent);margin-bottom:14px;}
+  .ueberschrift{display:flex;align-items:flex-start;gap:22px;margin-bottom:14px;}
+  .ueberschrift::before{content:"";width:6px;align-self:stretch;min-height:48px;background:var(--farbe-akzent);border-radius:3px;flex:0 0 auto;}
+  .ueberschrift h2{font-family:var(--schrift-serif);font-weight:800;font-size:33px;line-height:1.12;color:var(--farbe-dunkel);}
+  .ueberschrift .nr{font-family:var(--schrift-serif);font-weight:700;font-size:20px;color:var(--farbe-akzent);margin-right:2px;}
+  .intro-text{font-size:17px;color:var(--farbe-text-grau);max-width:78ch;margin:0 0 26px 28px;}
+  em{color:var(--farbe-akzent);font-style:italic;}
+
+  .karten{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px;margin-top:14px;}
+  .karte{background:var(--farbe-karte);border-radius:var(--radius);box-shadow:var(--schatten);padding:26px 28px;}
+  .karte h3{font-size:18px;font-weight:700;color:var(--farbe-dunkel);margin-bottom:10px;}
+  .karte h3.serif{font-family:var(--schrift-serif);font-size:21px;}
+  .karte p{color:var(--farbe-text-grau);font-size:15px;}
+  .karte.dunkel{background:var(--farbe-dunkel);color:#EBE3D8;}
+  .karte.dunkel h3{color:#fff;} .karte.dunkel p{color:#C9C0B5;}
+  .karte.akz{background:var(--farbe-akzent);color:#fff;} .karte.akz h3{color:#fff;} .karte.akz p{color:#F3E9DC;}
+  .karte .ebene{font-family:var(--schrift-serif);font-weight:700;font-size:13px;color:var(--farbe-akzent);margin-bottom:6px;letter-spacing:1px;}
+  .karte.akz .ebene,.karte.dunkel .ebene{color:var(--farbe-akzent-hell);}
+
+  ul.liste{list-style:none;margin:6px 0 0;}
+  ul.liste li{position:relative;padding-left:24px;margin-bottom:11px;font-size:15.5px;color:var(--farbe-text);line-height:1.55;}
+  ul.liste li::before{content:"";position:absolute;left:0;top:9px;width:9px;height:9px;border-radius:50%;background:var(--farbe-akzent);}
+  ul.liste li strong{color:var(--farbe-dunkel);}
+  .karte ul.mini{list-style:none;margin:8px 0 0;}
+  .karte ul.mini li{font-size:14px;color:var(--farbe-text-grau);padding-left:16px;position:relative;margin-bottom:5px;}
+  .karte ul.mini li::before{content:"–";position:absolute;left:0;color:var(--farbe-akzent);}
+
+  .zahlen{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:18px;margin-top:8px;}
+  .zahl-box{background:var(--farbe-karte);border-radius:14px;padding:22px;text-align:center;box-shadow:var(--schatten);}
+  .zahl-box .z{font-family:var(--schrift-serif);font-weight:800;font-size:30px;color:var(--farbe-akzent);line-height:1.05;}
+  .zahl-box .t{font-size:12.5px;color:var(--farbe-text-grau);margin-top:10px;}
+
+  .zitat{font-family:var(--schrift-serif);font-style:italic;font-size:23px;color:var(--farbe-akzent);
+    border-left:4px solid var(--farbe-akzent-hell);padding-left:24px;margin:24px 0 4px 28px;max-width:72ch;line-height:1.45;}
+  .zitat .wer{display:block;font-style:normal;font-family:var(--schrift-sans);font-size:14px;color:var(--farbe-text-grau);font-weight:600;margin-top:10px;}
+
+  .kern{background:var(--farbe-dunkel);color:#EBE3D8;}
+  .kern .ueberschrift h2{color:#fff;}
+  .kern .ueberschrift::before{background:var(--farbe-akzent-hell);}
+  .kern .label-akz{color:var(--farbe-akzent-hell);}
+  .kern .intro-text{color:#C9C0B5;}
+  .kern-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px;margin-top:14px;}
+  .kern-karte{background:#332b24;border-radius:var(--radius);padding:26px;border:1px solid #43392F;}
+  .kern-karte .nummer{width:46px;height:46px;border-radius:50%;background:var(--farbe-akzent-hell);color:var(--farbe-dunkel);
+    font-family:var(--schrift-serif);font-weight:700;font-size:20px;display:flex;align-items:center;justify-content:center;margin-bottom:16px;}
+  .kern-karte h3{color:#fff;font-size:17px;margin-bottom:8px;}
+  .kern-karte p{color:#C9C0B5;font-size:14.5px;}
+
+  footer{background:var(--farbe-dunkel);color:#A99B89;padding:42px 0;font-size:13px;}
+  footer .seite{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;}
+  .hinweis{font-size:12.5px;color:#7E715F;max-width:74ch;margin-top:10px;}
+
+  @media (max-width:640px){
+    .hero h1{font-size:34px;}
+    .ueberschrift h2{font-size:25px;}
+    .intro-text,.zitat{margin-left:0;}
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ HERO ============ -->
+<header class="hero">
+  <div class="seite">
+    <div class="balken"></div>
+    <div class="label">Strategiepapier · Innovatives Geschäftskonzept</div>
+    <h1>Das <span>Wirkungs-Ökosystem</span>: von der Bildungsidee zum Ökosystem-Architekten.</h1>
+    <p class="unter">Ein innovatives Geschäftskonzept für die Impact4Entrepreneurship gGmbH – aufgebaut auf dem eigenen Gesellschaftszweck: „Wirtschaft aus Berufung. Wirkung aus Klarheit."</p>
+    <div class="meta">
+      <div class="chip"><strong>Für</strong>Geschäftsführung I4E gGmbH</div>
+      <div class="chip"><strong>Gegenstand</strong>Innovatives Geschäftskonzept</div>
+      <div class="chip"><strong>Grundlage</strong>ausschließlich impact4entrepreneurship.de</div>
+      <div class="chip"><strong>Stand</strong>Juni 2026 · Entwurf v1.0</div>
+    </div>
+  </div>
+</header>
+
+<!-- ============ MANAGEMENT-ZUSAMMENFASSUNG ============ -->
+<section class="block">
+  <div class="seite">
+    <div class="label-akz">Auf einen Blick</div>
+    <div class="ueberschrift"><h2>Management-Zusammenfassung</h2></div>
+    <p class="intro-text">Im Gesellschaftszweck der I4E steckt bereits ein ungewöhnlich starkes Geschäftsmodell – nicht als klassisches „Produktmodell", sondern als <strong>Bildungs-, Netzwerk- und Transformationsökosystem</strong>. Der entscheidende Punkt: Die I4E verkauft nicht primär Wissen, sie entwickelt Menschen, Berufungen und werteorientierte Unternehmungen. Darin liegt das eigentliche Alleinstellungsmerkmal.</p>
+    <div class="karten">
+      <div class="karte">
+        <h3>Die Lücke</h3>
+        <p>Menschen haben Fähigkeiten, aber keine Richtung – sie gründen ohne innere Klarheit, erleben Wirtschaft als sinnentleert und finden keine Räume für werteorientiertes Gründen. Die I4E löst genau diese Leerstelle.</p>
+      </div>
+      <div class="karte akz">
+        <h3>Die Idee</h3>
+        <p>Ein „Berufungs-Inkubator": Nicht „Wie verdient man Geld?", sondern „Welches Problem bist du berufen zu lösen – und wie entsteht daraus nachhaltige Wirkung?"</p>
+      </div>
+      <div class="karte dunkel">
+        <h3>Der Sprung</h3>
+        <p>Aus dem Bildungsträger wird ein <strong>Ökosystem-Architekt</strong>: Die Satzung erlaubt Beteiligungen an gemeinnützigen Unternehmen – die I4E kann Inkubationen aufbauen, Beteiligungen halten und Impact-Unternehmen mitentwickeln.</p>
+      </div>
+    </div>
+    <p class="zitat">„Wir sind die Infrastruktur, die Menschen und Unternehmen befähigt, aus Berufung zu wirtschaften – und die diese Wirkung sichtbar, messbar und übertragbar macht."<span class="wer">— Selbstverständnis I4E</span></p>
+  </div>
+</section>
+
+<!-- ============ AUSGANGSLAGE / KERNPROBLEM ============ -->
+<section class="block">
+  <div class="seite">
+    <div class="label-akz">Kapitel 01</div>
+    <div class="ueberschrift"><h2><span class="nr">01 ·</span> Ausgangslage: das Kernproblem, das wir lösen</h2></div>
+    <p class="intro-text">Das Konzept beginnt nicht bei Märkten und Zielgruppen, sondern an einem anderen Ort: bei der Berufung des Menschen. Die zugrunde liegende Not ist konkret beschrieben:</p>
+    <ul class="liste">
+      <li>Viele Menschen haben <strong>Fähigkeiten, aber keine Richtung</strong>.</li>
+      <li>Sie <strong>gründen Unternehmen ohne innere Klarheit</strong>.</li>
+      <li>Sie <strong>erleben Wirtschaft als sinnentleert</strong>.</li>
+      <li>Sie <strong>verbinden Glauben, Ethik und Unternehmertum nicht</strong>.</li>
+      <li>Sie haben <strong>keine echten Mentoren</strong>.</li>
+      <li>Sie finden <strong>keine Räume für werteorientiertes Gründen</strong>.</li>
+    </ul>
+    <p class="intro-text" style="margin-top:22px">Der Markt liegt damit an der Schnittstelle von <em>Sinnkrise, KI-Zeitalter, Werteverlust, Unternehmerbildung und geistiger Orientierung</em> – nach eigenem Verständnis ein riesiger Zukunftsmarkt.</p>
+  </div>
+</section>
+
+<!-- ============ LEITIDEE & USP ============ -->
+<section class="block">
+  <div class="seite">
+    <div class="label-akz">Kapitel 02</div>
+    <div class="ueberschrift"><h2><span class="nr">02 ·</span> Leitidee &amp; Alleinstellung</h2></div>
+    <p class="intro-text">Der Ansatz dreht das klassische Denken um – das „Heilige Geschäftsmodell". Vision, Mission und Strategie greifen ineinander:</p>
+    <div class="karten">
+      <div class="karte"><h3 class="serif">Vision — das Was</h3><p>Wirtschaft als Ausdruck innerer Berufung. „Wirtschaft aus Berufung, Wirkung aus Klarheit." Klarheit im Denken führt zu Reinheit im Tun – und zu einer Wirkung, die Gesellschaft gestaltet.</p></div>
+      <div class="karte"><h3 class="serif">Mission — das Warum</h3><p>Förderung von Bildung als Formung des ganzen Menschen: ethisch denken, religiös reflektieren und marktwirtschaftlich verantwortungsvoll handeln.</p></div>
+      <div class="karte"><h3 class="serif">Strategie — das Wie</h3><p>Verbindung von Theorie und Praxis: Unternehmer, Gründer und Wissenschaftler im echten Dialog mit den Geförderten – Erkenntnisse werden geteilt und veröffentlicht.</p></div>
+    </div>
+
+    <h3 style="font-family:var(--schrift-serif);font-size:22px;margin:32px 0 4px 28px;color:var(--farbe-dunkel)">Der Ansatz dreht das klassische Denken um</h3>
+    <div class="karten">
+      <div class="karte akz">
+        <ul class="liste" style="margin-top:0">
+          <li style="color:#fff"><strong style="color:#fff">Berufung</strong> statt Mission Statement</li>
+          <li style="color:#fff"><strong style="color:#fff">Menschen, denen du dienst,</strong> statt Zielgruppe</li>
+          <li style="color:#fff"><strong style="color:#fff">Gabe</strong> statt Produkt</li>
+        </ul>
+        <style>.karte.akz ul.liste li::before{background:#fff;}</style>
+      </div>
+      <div class="karte akz">
+        <ul class="liste" style="margin-top:0">
+          <li style="color:#fff"><strong style="color:#fff">Innerer Zustand</strong> statt Prozesse</li>
+          <li style="color:#fff"><strong style="color:#fff">Wertfluss</strong> statt Einnahmequelle</li>
+          <li style="color:#fff"><strong style="color:#fff">Transformation</strong> als eigentliches Produkt</li>
+        </ul>
+      </div>
+    </div>
+    <p class="intro-text" style="margin-top:24px">Das eigentliche Produkt sind nicht Seminare, sondern <strong>„Transformation durch Berufung + Unternehmertum + Werte"</strong>: Orientierung, Identitätsklärung, unternehmerische Reifung, geistige Führung und Umsetzungskraft.</p>
+  </div>
+</section>
+
+<!-- ============ DAS GESCHÄFTSKONZEPT: 6 EBENEN ============ -->
+<section class="block">
+  <div class="seite">
+    <div class="label-akz">Kapitel 03</div>
+    <div class="ueberschrift"><h2><span class="nr">03 ·</span> Das innovative Geschäftskonzept in sechs Ebenen</h2></div>
+    <p class="intro-text">Das Modell trägt sich auf sechs ineinandergreifenden Ebenen – von der Bildungsplattform bis zum Beteiligungsmodell. Inkubator, Fellowship und Beteiligungen bilden dabei den strategischen Kern.</p>
+    <div class="karten">
+      <div class="karte">
+        <div class="ebene">Ebene 1</div><h3>Bildungsplattform</h3>
+        <p>Digitale Akademie mit KI-gestützten Lernpfaden.</p>
+        <ul class="mini"><li>Kurse, Masterclasses, Webinare</li><li>Zertifikate &amp; Unternehmertraining</li><li>Themen: Berufung, Heiliges Canvas, Bitcoin &amp; Ethik, KI &amp; Menschenbild, Leadership</li></ul>
+      </div>
+      <div class="karte akz">
+        <div class="ebene">Ebene 2 · stärkstes Modell</div><h3>Inkubator / Gründerbegleitung</h3>
+        <p>Der „Berufungs-Inkubator" – hier entsteht das stärkste Modell.</p>
+        <ul class="mini"><li>Ideenfindung &amp; Problemidentifikation</li><li>MVP-Aufbau &amp; Werteprüfung</li><li>Geschäftsmodell, Mentoring, Netzwerkzugang</li></ul>
+      </div>
+      <div class="karte">
+        <div class="ebene">Ebene 3 · wiederkehrend</div><h3>Fellowship / Community</h3>
+        <p>Mitgliedschaftsmodell (z. B. 29 / 49 / 99 € mtl.) – langfristig stabiler als Einzelveranstaltungen.</p>
+        <ul class="mini"><li>Live Calls, Unternehmerkreise, Mentoring</li><li>Bibliothek, Vorträge, Netzwerk</li><li>Mastermind-Gruppen, spirituelle Reflexion</li></ul>
+      </div>
+      <div class="karte">
+        <div class="ebene">Ebene 4</div><h3>Partnernetzwerk</h3>
+        <p>Kooperationen mit Schulen, Universitäten, Unternehmen, Stiftungen, Kirchen und jüdischen Bildungseinrichtungen.</p>
+        <ul class="mini"><li>Programme &amp; Workshops</li><li>Curricula &amp; Innovationsformate</li><li>Unternehmerbildung</li></ul>
+      </div>
+      <div class="karte">
+        <div class="ebene">Ebene 5 · Multiplikator</div><h3>Stipendienmodell</h3>
+        <p>Förderer gewinnen, Unternehmer einbinden, Patenschaften aufbauen – ein Multiplikationssystem.</p>
+        <ul class="mini"><li>Reiche Unternehmer finanzieren Studenten &amp; Gründer</li><li>Förderung sozialer Innovationen</li></ul>
+      </div>
+      <div class="karte dunkel">
+        <div class="ebene">Ebene 6 · strategisch</div><h3>Beteiligungsmodell</h3>
+        <p>Die Satzung erlaubt Beteiligungen an gemeinnützigen Unternehmen. Damit wird die I4E zum <strong>Ökosystem-Architekten</strong>.</p>
+        <ul class="mini"><li>Inkubationen aufbauen</li><li>Beteiligungen halten</li><li>Sozial- &amp; Impact-Unternehmen mitentwickeln</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ZIELGRUPPEN ============ -->
+<section class="block">
+  <div class="seite">
+    <div class="label-akz">Kapitel 04</div>
+    <div class="ueberschrift"><h2><span class="nr">04 ·</span> Zielgruppen</h2></div>
+    <p class="intro-text">Für Menschen, die etwas Reales bewegen und Wirtschaft nicht gegen ihre Werte leben wollen. „Nicht für alle. Aber für die Richtigen."</p>
+    <div class="karten">
+      <div class="karte">
+        <h3>Primär</h3>
+        <ul class="liste" style="margin-top:4px">
+          <li>Schüler &amp; Studenten</li>
+          <li>junge Gründer</li>
+          <li>sinnsuchende Unternehmer</li>
+          <li>werteorientierte Führungskräfte</li>
+        </ul>
+      </div>
+      <div class="karte">
+        <h3>Sekundär</h3>
+        <ul class="liste" style="margin-top:4px">
+          <li>Schulen &amp; Hochschulen</li>
+          <li>christliche und jüdische Bildungswerke</li>
+          <li>Stiftungen &amp; Unternehmen mit Wertefokus</li>
+          <li>Family Offices &amp; Impact-Investoren</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ERTRAGSMODELL ============ -->
+<section class="block">
+  <div class="seite">
+    <div class="label-akz">Kapitel 05</div>
+    <div class="ueberschrift"><h2><span class="nr">05 ·</span> Ertragsmodell: drei Sphären</h2></div>
+    <p class="intro-text">Die Einnahmen verteilen sich gemeinnützigkeitskonform auf drei Sphären – von Förderung über Zweckbetrieb bis zum wirtschaftlichen Geschäftsbetrieb.</p>
+    <div class="karten">
+      <div class="karte">
+        <h3 class="serif">Gemeinnütziger Bereich</h3>
+        <ul class="mini"><li>Spenden</li><li>Fördermittel &amp; Stiftungen</li><li>Sponsoring</li><li>Bildungsförderung</li></ul>
+      </div>
+      <div class="karte akz">
+        <h3 class="serif">Zweckbetrieb</h3>
+        <ul class="mini"><li>Seminare &amp; Kurse</li><li>Zertifikate</li><li>Akademie</li><li>Veranstaltungen</li></ul>
+      </div>
+      <div class="karte dunkel">
+        <h3 class="serif">Wirtschaftlicher Geschäftsbetrieb</h3>
+        <ul class="mini"><li>Beratung &amp; Strategieworkshops</li><li>Lizenzmodelle, Medien, Bücher</li><li>Podcast-Sponsoring</li><li>Unternehmerprogramme &amp; KI-Tools</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ORGANISATIONSSTRUKTUR ============ -->
+<section class="block">
+  <div class="seite">
+    <div class="label-akz">Kapitel 06</div>
+    <div class="ueberschrift"><h2><span class="nr">06 ·</span> Mögliche Struktur der I4E</h2></div>
+    <p class="intro-text">Fünf klar geschnittene Einheiten machen aus dem Konzept eine führbare Organisation:</p>
+    <div class="karten">
+      <div class="karte"><div class="ebene">I4E Academy</div><h3>Bildung &amp; Training</h3><p>Digitale Akademie, Kurse, Masterclasses, Zertifikate.</p></div>
+      <div class="karte"><div class="ebene">I4E Labs</div><h3>Innovation &amp; Gründung</h3><p>Der Inkubator – von der Idee bis zum MVP.</p></div>
+      <div class="karte"><div class="ebene">I4E Fellowship</div><h3>Community &amp; Mentoring</h3><p>Mitgliedschaft, Live Calls, Mastermind-Gruppen.</p></div>
+      <div class="karte"><div class="ebene">I4E Ventures</div><h3>Beteiligungen &amp; Inkubation</h3><p>Aufbau und Halten werteorientierter Beteiligungen.</p></div>
+      <div class="karte"><div class="ebene">I4E Media</div><h3>Inhalte &amp; Reichweite</h3><p>Podcast, Bücher, Plattformen, Inhalte.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LEISTUNGSBAUSTEINE HEUTE ============ -->
+<section class="block">
+  <div class="seite">
+    <div class="label-akz">Kapitel 07</div>
+    <div class="ueberschrift"><h2><span class="nr">07 ·</span> Was heute schon steht</h2></div>
+    <p class="intro-text">Das Konzept ist kein Reißbrettentwurf – zentrale Bausteine sind bereits aktiv und belegen die Tragfähigkeit.</p>
+    <div class="karten">
+      <div class="karte"><h3>Kursbibliothek</h3><p>Kompakte Lerninhalte, die unternehmerisches Denken mit Sinn, Verantwortung und innerer Klarheit verbinden – u. a. „Ethische KI", „Was Bitcoin bringt", „Warum deine Berufung mehr zählt als Geld" und „Firma nach biblischen Grundsätzen".</p></div>
+      <div class="karte"><h3>Exzellent verhandeln</h3><p>Dreiteiliges Video-Seminar von Wilfried Franz – das Vermächtnis aus über 1.000 Verhandlungen in 40 Unternehmerjahren.</p></div>
+      <div class="karte"><h3>Impact Founders Programm</h3><p>Webinar „Der Heilige BusinessCanvas": Schüler, Studierende und Gründer lösen eine reale gesellschaftliche Herausforderung mit unternehmerischen Mitteln – geleitet von Mentoren aus Wirtschaft, Wissenschaft und Ethik.</p></div>
+      <div class="karte"><h3>Partner-Bildungsangebote</h3><p>Erweiterung über Partner: traumasensible Krisenbegleitung (Traumainstitut TIPS, Niesky, ab 2026) und „Capacitas" – ein Denkraum über Bitcoin, Geld und Verantwortung.</p></div>
+      <div class="karte akz"><h3>Beteiligungen</h3><p>Bereits eingegangen: <strong>P3 Werkstatt gGmbH</strong>, <strong>LIFETEACHUS gGmbH</strong> und <strong>UMARIO – Dorf der Glückseligen</strong>. Beteiligung heißt: „Nicht besitzen, sondern ermöglichen."</p></div>
+      <div class="karte"><h3>Podcast &amp; Reichweite</h3><p>Eigener Podcast als Medien- und Reichweitenkanal – Grundstein für die Einheit „I4E Media".</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STRATEGISCHES NARRATIV ============ -->
+<section class="block kern">
+  <div class="seite">
+    <div class="label-akz">Kapitel 08</div>
+    <div class="ueberschrift"><h2>Das stärkste strategische Narrativ</h2></div>
+    <p class="intro-text">Viele Organisationen bilden Menschen aus. Aber kaum jemand verbindet Berufung, Ethik, Wirtschaft, Unternehmertum, Spiritualität, Technologie und Gesellschaftstransformation in einem Ansatz. Genau darin liegt die Kraft der I4E.</p>
+    <div class="kern-grid">
+      <div class="kern-karte"><div class="nummer">1</div><h3>Eigene Kategorie</h3><p>Die I4E bewegt sich nicht nur im Bildungsmarkt, sondern an der Schnittstelle von Sinnkrise, KI-Zeitalter und Werteverlust.</p></div>
+      <div class="kern-karte"><div class="nummer">2</div><h3>Vom Träger zum Architekten</h3><p>Bildung, Inkubation und Beteiligung greifen ineinander – die I4E wird Ökosystem-Architekt statt reiner Bildungsträger.</p></div>
+      <div class="kern-karte"><div class="nummer">3</div><h3>Tieferer Kern</h3><p>Unternehmertum als Antwort auf einen Ruf: nicht nur Markt, sondern Verantwortung; nicht nur Gewinn, sondern Wirkung; nicht nur Skalierung, sondern Licht.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EMPFEHLUNG ============ -->
+<section class="block">
+  <div class="seite">
+    <div class="label-akz">Kapitel 09 · Empfehlung</div>
+    <div class="ueberschrift"><h2><span class="nr">09 ·</span> Strategische Empfehlung &amp; nächste Schritte</h2></div>
+    <p class="intro-text">Abgeleitet aus den im Konzept selbst gesetzten Prioritäten – „klein, klar, konkret", und „Wahrheit zeigt sich nicht im Plan, sondern im ersten Schritt".</p>
+    <div class="karten">
+      <div class="karte"><div class="ebene">Schritt 1</div><h3>Inkubator schärfen</h3><p>Die Gründerbegleitung (I4E Labs) ist laut Konzept das stärkste Modell. Hier zuerst ein erstes reales Angebot entwickeln und in die Umsetzung bringen.</p></div>
+      <div class="karte"><div class="ebene">Schritt 2</div><h3>Fellowship starten</h3><p>Das Mitgliedschaftsmodell schafft wiederkehrende, stabile Erträge – stabiler als Einzelveranstaltungen. Früh aufbauen.</p></div>
+      <div class="karte"><div class="ebene">Schritt 3</div><h3>Beteiligungen ausbauen</h3><p>Auf den bestehenden Beteiligungen (P3, LIFETEACHUS, UMARIO) aufsetzen und die Rolle als Ökosystem-Architekt strategisch weiterentwickeln.</p></div>
+      <div class="karte"><div class="ebene">Schritt 4</div><h3>Stipendien &amp; Förderer</h3><p>Förderer, Unternehmer und Family Offices als Multiplikatoren einbinden – Stipendien als Hebel für Reichweite und Wirkung.</p></div>
+    </div>
+    <p class="zitat" style="margin-top:34px">„Du brauchst nicht noch mehr Informationen. Du brauchst Klarheit. Wenn du spürst, dass etwas in dir nicht mehr warten will, dann beginne. Nicht perfekt. Aber wahr."<span class="wer">— Impact4Entrepreneurship</span></p>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="seite">
+    <div>
+      <strong style="color:#EBE3D8;font-size:15px;">Impact4Entrepreneurship gGmbH · Strategiepapier</strong>
+      <div class="hinweis">Innovatives Geschäftskonzept „Wirkungs-Ökosystem", erstellt für die Geschäftsführung. Inhaltliche Grundlage ausschließlich die öffentlich zugänglichen Texte der Website impact4entrepreneurship.de (Home, Leitbild, Zweck, Bildungsangebote, Beteiligungen, Geschäftsmodell, Impact Founders Programm). Strategische Einordnung und Struktur dienen der Entscheidungsvorbereitung.</div>
+    </div>
+    <div style="text-align:right">Quelle:<br>impact4entrepreneurship.de</div>
+  </div>
+</footer>
+
+</body>
+</html>
